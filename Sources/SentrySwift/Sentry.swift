@@ -8,6 +8,9 @@
 
 import Foundation
 import Gzip
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 public enum SentryError: Error {
     case missingDSN
