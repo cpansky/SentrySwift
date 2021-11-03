@@ -23,8 +23,8 @@ public struct DSN {
     /// The public key to authenticate the user.
     public let publicKey: String
     
-    /// The private key to authenticate the user.
-    internal let secretKey: String
+//    /// The private key to authenticate the user.
+//    internal let secretKey: String
     
     /// The project ID which the authenticated user is bound to.
     public let projectID: String
@@ -47,7 +47,7 @@ public struct DSN {
             let url = URL(string: dsn),
             let scheme = url.scheme,
             let hostname = url.host,
-            let publicKey = url.user,
+            let publicKey = url.user
 //            let secretKey = url.password
         else { throw DSNError.invalid }
         
@@ -58,7 +58,7 @@ public struct DSN {
         guard let host = components.url else { throw DSNError.invalid }
         
         self.publicKey = publicKey
-        self.secretKey = secretKey
+//        self.secretKey = secretKey
         self.host = host
         self.projectID = url.path.replacingOccurrences(of: "/", with: "")
         var uri = host.appendingPathComponent("api", isDirectory: false)
