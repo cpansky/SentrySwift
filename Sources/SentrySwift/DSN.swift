@@ -48,7 +48,7 @@ public struct DSN {
             let scheme = url.scheme,
             let hostname = url.host,
             let publicKey = url.user,
-            let secretKey = url.password
+//            let secretKey = url.password
         else { throw DSNError.invalid }
         
         var components = URLComponents()

@@ -133,7 +133,7 @@ internal extension Sentry {
                 "sentry_client": "\(sentryClient)",
                 "sentry_timestamp": "\(Date().timeIntervalSince1970)",
                 "sentry_key": dsn.publicKey,
-                "sentry_secret": dsn.secretKey
+//                "sentry_secret": dsn.secretKey
             ]
             
             return components
